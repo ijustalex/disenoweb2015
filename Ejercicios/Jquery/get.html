@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#1").click(function(){
+        alert($("#pin").attr("href"));
+    });
+
+    $("#2").click(function(){
+        alert("Mi nombre es " + $("#test").val());
+    });
+
+    $("#3").click(function(){
+        alert("HTML: " + $("#tw").html());
+    });
+
+});
+</script>
+</head>
+<body>
+
+
+<p>Nombre: <input type="text" id="test" value=""></p>
+
+<p id="tw"><a href="jaskasjsk" id="pin">Twitter</a></p>
+
+<button id="1">Show href Value</button>
+
+<button id="2">Show Name</button>
+
+<button id="3">Show HTML</button>
+
+</body>
+</html>
