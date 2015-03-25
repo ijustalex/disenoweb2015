@@ -24,10 +24,9 @@
 				<div class="img"></div>
 			</div>
 			<div class="thumbnails">
-				<div class="thu" data-img="img/1.jpg"></div>
-				<div class="thu" data-img="img/2.jpg"></div>
-				<div class="thu" data-img="img/3.jpg"></div>
-				<div class="clearfix"></div>
+				<div id="thu" class="thu" data-img="img/1.jpg"></div>
+				<div id="thu" class="thu" data-img="img/2.jpg"></div>
+				<div id="thu" class="thu" data-img="img/3.jpg"></div>
 			</div>
 		</div>
 
@@ -78,6 +77,7 @@
 			$(this).css('background-image','url('+ $url_imagen +')')  
       	});
       		$('.thumbnails').animate({marginTop:'0px', opacity:1}, 900,'easeOutCubic');
+
 	      	$('.thu').click(function(event) {
 	      		var $url_imagen= $(this).data('img');
 	      		$('.tb .img')
@@ -90,12 +90,12 @@
 	      			opacity: 1},
 	      			500 , 'easeOutCubic',function() {
 	      		});
+	      		
       		});
-      		
+   
       	});
 
 		(function ($){
-
 			var handler = $("#tiles li");
 				handler.wookmark({
 					autoResize:true,
@@ -109,6 +109,7 @@
 					handler.wookmark();
 				});
 			}) (jQuery);  
-		
 	</script>
 </html>
+
+
