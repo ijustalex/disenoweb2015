@@ -33,28 +33,32 @@
 		<div class="bottombar">
 			<div id="main">
 				<ul id="tiles">
-					<li><a href="img/5.jpg" data-lightbox="exameple-set" data-title="Take a place with a bird">
-						<img src="img/5.jpg" alt="" class="example-image">
-					</a></li>
-
-					<li><a href="img/4.jpg" data-lightbox="exameple-set" data-title="Just the city can make you feel">
-						<img src="img/4.jpg" alt="" class="example-image">
-					</a></li>
-
-					<li><a href="img/6.jpg" data-lightbox="exameple-set" data-title="Look in your eyes">
-						<img src="img/6.jpg" alt="" class="example-image">
-					</a></li>
-
-					<li><a href="img/8.jpg" data-lightbox="exameple-set" data-title="Clocki clu">
-						<img src="img/8.jpg" alt="" class="example-image">
-					</a></li>
-
-					<li><a href="img/7.jpg" data-lightbox="exameple-set" data-title="Back">
+					<li><a href="img/7.jpg" data-lightbox="exameple-set" data-title="By the way, he is the love of my life">
 						<img src="img/7.jpg" alt="" class="example-image">
 					</a></li>
 
-					<li><a href="img/9.jpg" data-lightbox="exameple-set" data-title="Lines in your life">
+					<li><a href="img/5.jpg" data-lightbox="exameple-set" data-title="She's exactly what my pass means">
+						<img src="img/5.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/8.jpg" data-lightbox="exameple-set" data-title="What a smile can do">
+						<img src="img/8.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/6.jpg" data-lightbox="exameple-set" data-title="Something borrow">
+						<img src="img/6.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/9.jpg" data-lightbox="exameple-set" data-title="Back">
 						<img src="img/9.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/10.jpg" data-lightbox="exameple-set" data-title="A beautiful garden view">
+						<img src="img/10.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/4.jpg" data-lightbox="exameple-set" data-title="Focus in what you want">
+						<img src="img/4.jpg" alt="" class="example-image">
 					</a></li>
 				</ul>
 			</div>
@@ -82,13 +86,25 @@
 	      		var $url_imagen= $(this).data('img');
 	      		$('.tb .img')
 	      		.css('opacity', '0')
-	      		.css('left', '100%')
 	      		.css('top', '50%')
+	      		.css('left', '50%')
 	      		.css('background-image','url('+ $url_imagen +')')
 	      		.animate({
-	      			left: '50%',
-	      			opacity: 1},
+	      			left: '112%',
+	      			opacity: '1'},
 	      			500 , 'easeOutCubic',function() {
+
+		      			$(this).data('img');
+				      		$('.tb .img')
+				      		.css('opacity', '0')
+				      		.css('top', '50%')
+				      		.css('left', '0%')
+				      		.css('background-image','url('+ $url_imagen +')')
+				      		.animate({
+				      			left: '50%',
+				      			opacity: '1'},
+				      			200 , 'easeOutCubic',function() {
+	      			});	
 	      		});
 	      		
       		});
