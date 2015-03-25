@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>BxSlider</title>
+
+		<link type="text/css" rel="stylesheet" href="bxslider1/jquery.bxslider.css">
+		<script type="text/javascript" src="../../jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="bxslider1/jquery.bxslider.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.bxslider').bxSlider({
+					mode: 'fade',
+					caption: true
+				})
+			});
+		</script>
+		<style>
+		
+		.all {
+			text-align: center;
+			width: 900px;
+			margin: 0 auto;
+			padding-top: 100px;
+		}
+
+		.container {
+			width: auto;
+			height: auto;
+		}
+
+		.main{
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.main ul{
+			margin: 0;
+			padding: 0;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div class="all">
+			<div class="container">
+				<div class="main">
+					<ul class="bxslider">
+						<li><img src="bxslider1/images/photos/photo1.jpg" title="Rose"></li>
+						<li><img src="bxslider1/images/photos/photo2.jpg" title="Jewerly"></li>
+						<li><img src="bxslider1/images/photos/photo3.jpg" title="LightHouse"></li>
+					</ul>
+				</div>		
+			</div>
+		</div>
+	</body>
+</html>

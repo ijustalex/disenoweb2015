@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>White in your Black</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="plugins/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="plugins/easing/jquery.easing.1.3.js"></script>
+	
+	<script type="text/javascript" src="plugins/wookmark/jquery.wookmark.js"></script>
+	<script type="text/javascript" src="plugins/lightbox/lightbox.js"></script>
+	<link rel="stylesheet" href="plugins/wookmark/reset.css">
+	<link rel="stylesheet" href="plugins/wookmark/main.css">
+	<link rel="stylesheet" href="plugins/lightbox/lightbox.css">
+
+
+</head>
+<body>
+	
+	<div class="all">
+		<div class="topbar">
+			<div class="tb">
+				<div class="img"></div>
+			</div>
+			<div class="thumbnails">
+				<div class="thu" data-img="img/1.jpg"></div>
+				<div class="thu" data-img="img/2.jpg"></div>
+				<div class="thu" data-img="img/3.jpg"></div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div class="bottombar">
+			<div id="main">
+				<ul id="tiles">
+					<li><a href="img/5.jpg" data-lightbox="exameple-set" data-title="Take a place with a bird">
+						<img src="img/5.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/4.jpg" data-lightbox="exameple-set" data-title="Just the city can make you feel">
+						<img src="img/4.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/6.jpg" data-lightbox="exameple-set" data-title="Look in your eyes">
+						<img src="img/6.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/8.jpg" data-lightbox="exameple-set" data-title="Clocki clu">
+						<img src="img/8.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/7.jpg" data-lightbox="exameple-set" data-title="Back">
+						<img src="img/7.jpg" alt="" class="example-image">
+					</a></li>
+
+					<li><a href="img/9.jpg" data-lightbox="exameple-set" data-title="Lines in your life">
+						<img src="img/9.jpg" alt="" class="example-image">
+					</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+	
+	<div class="agbar">
+		<img src="img/logoag.png" alt="">
+	</div>
+
+</body>
+
+<script>
+
+      $(document).ready(function() {
+      	$('.thu').each(function(index, el) {
+      		var $url_imagen= $(this).data('img');         
+			$(this).css('background-image','url('+ $url_imagen +')')  
+      	});
+      		$('.thumbnails').animate({marginTop:'0px', opacity:1}, 900,'easeOutCubic');
+	      	$('.thu').click(function(event) {
+	      		var $url_imagen= $(this).data('img');
+	      		$('.tb .img')
+	      		.css('opacity', '0')
+	      		.css('left', '100%')
+	      		.css('top', '50%')
+	      		.css('background-image','url('+ $url_imagen +')')
+	      		.animate({
+	      			left: '50%',
+	      			opacity: 1},
+	      			500 , 'easeOutCubic',function() {
+	      		});
+      		});
+      		
+      	});
+
+		(function ($){
+
+			var handler = $("#tiles li");
+				handler.wookmark({
+					autoResize:true,
+					container:$("#main"),
+					offset: 30,
+					itemWidth: 210
+				});
+			handler.click(function(){
+					var newHeight = $("img", this).height() + Math.round(Math.random() );
+					$(this).css("height", newHeight+"px");
+					handler.wookmark();
+				});
+			}) (jQuery);  
+		
+	</script>
+</html>

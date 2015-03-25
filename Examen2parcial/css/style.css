@@ -1,0 +1,72 @@
+body{
+	background-image: url(../img/bkg.jpg);
+	background-size: cover;
+	background-position: center;
+	margin:0;
+	padding:0;
+	background-color: black;
+	height: 100%;
+}
+
+.tb{
+	height: 400px;
+	position: relative;
+}
+
+.tb .img{
+	width: 300px;
+	height: 300px;
+	border-radius: 400px;
+	background-color: white;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	top:-30%;
+	margin-top: -150px;
+	opacity: 0;
+	background-size: cover;
+	background-position: center;
+}
+
+.thumbnails {
+	text-align: center;
+	margin-top: 150px;
+	opacity: 0;
+}
+
+.thu{
+	height: 50px;
+	width: 80px;
+	background-color: white;
+	border-radius: 20px 20px;
+	border: 1px solid transparent;
+	display: inline-block;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.thu:hover{
+	border: 1px solid white;
+}
+.clearfix{
+	clear: both;
+}
+
+.bottombar {
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+.bottombar img{
+	width: 200px;
+}
+
+.agbar {
+	margin-top: 150px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.agbar img{
+	width: 450px;
+}
